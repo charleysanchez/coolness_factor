@@ -1,9 +1,11 @@
 body {
-    background-color: powderblue;
-  }
-  h1 {
-    color: blue;
-  }
-  p {
-    color: red;
-  }
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+.image-container {
+    margin-bottom: 20px;
+}
+.rating-scale {
+    margin-top: 10px;
+}
