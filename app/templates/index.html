@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolness Rater</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Info Blurb Container (initially hidden) -->
+    <div id="infoBlurb" class="info-blurb">
+        <div class="info-content">
+            <h1>Welcome to the coolness detection website!</h1>
+            <h2>Simple rules!</h2>
+            <p>Just rate each photo based on your evaluation of how cool it is (no wrong answers!)</p>
+            <h2>-- Some Shortcuts --</h2>
+            <p>Once you click on the slider once you may:</p>
+            <p>  -Use the arrow keys to shift rating</p>
+            <p>  -Press enter to submit quickly</p>
+            <p>-----------------------------------------------------------------------------------------------------------------</p>
+            <p>Once you are ready simply click anywhere to start</p>
+        </div>
+    </div>
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img id="image" src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Cool Image" data-photo-id="1">
+        </div>
+        <div class="rating-scale">
+            <div class="rating-header">
+                <label for="rating">Rate the coolness (0-10):</label>
+            </div>
+            <!-- <label for="rating">Rate the coolness (1-10):</label> -->
+            <div class="slider-container">
+                <input type="range" id="ratingSlider" min="0" max="10" value="5" step="1">
+                <div class="slider-value" id="sliderValue">5</div>
+            </div>
+            <button onclick="submitRating()">Submit</button>
+        </div>
+    </div>    
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script></body>
+</html>

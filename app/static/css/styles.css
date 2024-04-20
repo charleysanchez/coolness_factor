@@ -1,0 +1,134 @@
+.image-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-blurb {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999; /* Ensure it's above other content */
+}
+
+.info-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.info-content p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.5;
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: Arial, sans-serif; /* Specify font family */
+    background-color: #f5f5f5; /* Fallback background color */
+    /* Background image with repeating pattern */
+    background-image: url('minion.jpeg');
+    background-repeat: repeat;
+    /* Set opacity for background image */
+    /* min-height: 100vh; */
+    /* Center and stretch background image */
+    background-position: center center;
+}
+
+
+.image-wrapper {
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+}
+
+#image {
+    max-width: 100%; /* Ensure image does not exceed its original size */
+    max-height: 80vh; /* Limit image height to 80% of viewport height */
+    display: block; /* Ensure image is displayed as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.rating-scale {
+    position: fixed;
+    bottom: 20px; /* Adjust this value to set the desired distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 80%; /* Adjust width as needed */
+    height: 100px;
+    padding: 10px;
+    background-color: rgba(154, 189, 248, 1.0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+}
+
+.rating-header {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    margin-bottom: 10px;
+}
+
+.rating-scale button {
+    width: 100px; /* Adjust button width as needed */
+}
+
+.background-overlay {
+    /* Create a semi-transparent overlay on top of the background image */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity value (0.0 - 1.0) */
+    z-index: -1; /* Move the overlay behind other content */
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+}
+
+input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-value {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #007bff;
+}
