@@ -119,9 +119,16 @@ data = {
 
 df = pd.DataFrame(data)
 sorted_df = df.sort_values(by='Image_Number', ascending=True)
+max_rating = df.loc[df['Predicted_Coolness_Score'].idxmax()]
+top_5_by_column = df.sort_values(by='Predicted_Coolness_Score', ascending=False).head(5)
+bot = df.sort_values(by='Predicted_Coolness_Score', ascending=True).head(5)
 
+print(top_5_by_column)
+print(max_rating)
+print(bot)
 # Display the DataFrame
 print(sorted_df)
+
 
 
 plt.figure(figsize=(8, 5))
