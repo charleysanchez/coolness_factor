@@ -52,3 +52,13 @@ To run the project, follow these steps:
 6. Follow the instructions provided by each script to input necessary parameters or paths.
 
 Note: Make sure your image data is organized and named correctly according to the expected file paths in the scripts.
+
+#### Data Collection
+
+The data for this project was collected using a website I created using flask which was run locally on my mac. The website was hosted on coolness-factor.duckdns.org and was spread through my other class's Piazza as well as reddit and friends and family. The website randomly cycled through the 593 different images located in the /app/static/images folder that I obtained online. With each image, the user was presented with a slider upon which they could rate the "coolness" of each image on a scale from 0-10. Looking through the database, I only received ~900 ratings throughout the past couple weeks. This means that some images weren't rated, and most were only rated once. This affects my model, as it does not have a lot to learn from. The impact can be seen in the model following closely to ratings that were given by the user, although there are some exceptions in which you can see that the model had deviations from. It was interesting to compare the model's rating of the same photos shown to the user, and in the **test_against_data.py** I played with this. The output of the lowest rated and highest rated photos are sent to the standard output meaning you can see which images these are and check in the folder to see if you agree with the ratings. I found that the "coolest" images I was in agreement with, although the "uncoolest" were a bit controversial in my mind. I also have a plot showing the difference in the user's rating and the model's rating. The large spikes are most likely due to the fact that the user did not rate every photo, therefore there are some outliers that we can see where the model has a "completely different" opinion than the user. This is due to the low sample size and can be explained by a lack of user ratings for every photo.
+
+Here are a couple pictures showing the website in case I take it down by the time you are grading this project:
+
+![alt text](image.png)
+
+![alt text](image-1.png)

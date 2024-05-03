@@ -128,7 +128,7 @@ print(sorted_df)
 
 
 plt.figure(figsize=(8, 5))
-plt.plot(sorted_df['Image_Number'], sorted_df['User_Rating'] - sorted_df['Predicted_Coolness_Score'], label='User Rating', marker = 'o', linestyle=' ')
+plt.plot(sorted_df['Image_Number'], sorted_df['User_Rating'] - sorted_df['Predicted_Coolness_Score'], label='User Rating - Model Rating', marker = 'o', linestyle=' ')
 # plt.plot(sorted_df['Image_Number'], sorted_df['Predicted_Coolness_Score'], marker='o', linestyle=' ', label='Predicted by Model')
 plt.legend()
 plt.grid(True)
