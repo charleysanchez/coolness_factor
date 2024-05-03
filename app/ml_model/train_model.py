@@ -8,14 +8,13 @@ print("Data Retrieved")
 num_images = len(data)
 
 # Preprocess the data
-X = []  # Features (image data or extracted features)
+X = []  # Features
 y = []  # Target (ratings)
 
 print("Beginning image processing")
 for i, image_number, rating in data:
     print(f"processing image: {i}/{num_images}")
-    # Load and preprocess image corresponding to image_number (you can use OpenCV or other libraries)
-    img_features = preprocess_image(image_number)  # Function to extract image features
+    img_features = preprocess_image(image_number)
     X.append(img_features)
     y.append(rating)
 

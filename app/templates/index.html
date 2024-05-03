@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-
-    <!-- Info Blurb Container (initially hidden) -->
     <div id="infoBlurb" class="info-blurb">
         <div class="info-content">
             <h1>Welcome to the coolness detection website!</h1>
@@ -30,7 +28,6 @@
             <div class="rating-header">
                 <label for="rating">Rate the coolness (0-10):</label>
             </div>
-            <!-- <label for="rating">Rate the coolness (1-10):</label> -->
             <div class="slider-container">
                 <input type="range" id="ratingSlider" min="0" max="10" value="5" step="1">
                 <div class="slider-value" id="sliderValue">5</div>

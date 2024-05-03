@@ -36,7 +36,7 @@ def extract_color_histogram(image):
     hist_g = cv2.calcHist([image], [1], None, [256], [0, 256])
     hist_b = cv2.calcHist([image], [2], None, [256], [0, 256])
 
-    # Normalize histograms (optional but often recommended)
+    # Normalize histograms
     hist_r = cv2.normalize(hist_r, hist_r).flatten()
     hist_g = cv2.normalize(hist_g, hist_g).flatten()
     hist_b = cv2.normalize(hist_b, hist_b).flatten()
@@ -71,7 +71,7 @@ def extract_shape_features(image):
     _, thresh = cv2.threshold(image_gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
     contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    # Extract shape-based features (e.g., contour area, perimeter)
+    # Extract shape-based features
     shape_features = []
     for contour in contours:
         area = cv2.contourArea(contour)
