@@ -56,16 +56,12 @@ def preprocess_new_image(image_path):
     return features
 
 def load_and_preprocess_image(image_path):
-    # Load and preprocess the image (e.g., resize, normalize)
-    # Example:
     image = cv2.imread(image_path)
     image = cv2.resize(image, (400, 400))
-    # Additional preprocessing steps as needed
     return image
 
 def extract_features(image):
     # Extract features from the image
-    # Example: Use the same feature extraction functions used during model training
     color_features = extract_color_histogram(image)
     texture_features = extract_texture_features(image)
     shape_features = extract_shape_features(image)
