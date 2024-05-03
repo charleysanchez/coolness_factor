@@ -55,9 +55,22 @@ Note: Make sure your image data is organized and named correctly according to th
 
 #### Data Collection
 
-The data for this project was collected using a website I created using flask which was run locally on my mac. The website was hosted on coolness-factor.duckdns.org and was spread through my other class's Piazza as well as reddit and friends and family. The website randomly cycled through the 593 different images located in the /app/static/images folder that I obtained online. With each image, the user was presented with a slider upon which they could rate the "coolness" of each image on a scale from 0-10. Looking through the database, I only received ~900 ratings throughout the past couple weeks. This means that some images weren't rated, and most were only rated once. This affects my model, as it does not have a lot to learn from. The impact can be seen in the model following closely to ratings that were given by the user, although there are some exceptions in which you can see that the model had deviations from. It was interesting to compare the model's rating of the same photos shown to the user, and in the **test_against_data.py** I played with this. The output of the lowest rated and highest rated photos are sent to the standard output meaning you can see which images these are and check in the folder to see if you agree with the ratings. I found that the "coolest" images I was in agreement with, although the "uncoolest" were a bit controversial in my mind. I also have a plot showing the difference in the user's rating and the model's rating. The large spikes are most likely due to the fact that the user did not rate every photo, therefore there are some outliers that we can see where the model has a "completely different" opinion than the user. This is due to the low sample size and can be explained by a lack of user ratings for every photo.
+#### Data Collection
 
-Here are a couple pictures showing the website in case I take it down by the time you are grading this project:
+The data for this project was collected using a website created with Flask, which was hosted locally on a Mac. The website was accessible at coolness-factor.duckdns.org and was promoted through various channels including a class Piazza, Reddit, and among friends and family. 
+
+The website randomly presented users with images from the `/app/static/images` folder, comprising a total of 593 images sourced online. For each image, users were prompted to rate its "coolness" on a scale from 0 to 10 using a slider. 
+
+Throughout the collection period, approximately 900 ratings were obtained. However, many images remained unrated, and most received only one rating. This limited data affects the model's learning process, resulting in a tendency for the model to closely mimic user ratings, with some exceptions where deviations occur.
+
+The impact of this data limitation can be observed in the comparison between the model's ratings and those provided by users. This comparison is explored in the `test_against_data.py` script. Additionally, the script outputs the lowest and highest rated images, allowing users to check if they agree with the ratings. 
+
+While the model's ratings for the "coolest" images were generally in agreement with user ratings, there was some controversy regarding the "uncoolest" images. 
+
+A plot depicting the difference between user and model ratings is also generated. Large spikes in the plot are likely due to images that were not rated by users, resulting in outliers where the model's opinion significantly differs from the user's. This discrepancy can be attributed to the low sample size and the absence of user ratings for certain images.
+
+Below are screenshots of the website for reference, in case it is taken down before evaluation.
+
 
 ![alt text](image.png)
 
